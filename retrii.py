@@ -119,7 +119,7 @@ ki5mid = ki5.getProfile().mid
 ki5mid = ki5.getProfile().mid
 ki6mid = ki6.getProfile().mid
 Bots=[mid,kimid,ki2mid,ki3mid,ki4mid,ki5mid,ki6mid]
-admsa = "uc72e39d8c26cb3aacad5201e6f2c348c"
+admsa = "uc72e39d8c26cb3aacad5201e6f2c348c","ua900e1ba4a91a01b7de658f26471c510"
 
 wait = {
     'contact':False,
