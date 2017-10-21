@@ -20,17 +20,17 @@ kc = LINETCR.LINE()
 kc.login(qr=True)
 kc.loginResult()
 
-#kd = LINETCR.LINE()
-#kd.login(token="ElFboq4YotCxrc6KchI4.zZgpJFVgnTXsAoBGot7R5a.m73ipn9Oete00vGQKXQXmLxJFVa+lfWU6UZUGIu7pu8=")
-#kd.loginResult()
+kd = LINETCR.LINE()
+kd.login(token="ElFboq4YotCxrc6KchI4.zZgpJFVgnTXsAoBGot7R5a.m73ipn9Oete00vGQKXQXmLxJFVa+lfWU6UZUGIu7pu8=")
+kd.loginResult()
 
-#ke = LINETCR.LINE()
-#ke.login(token="ElAShEWQBs0hqKopBVW1.4fuVTJqVSQWyBCcCKr7WSq.4p9tEulR26lTSlMpPnvZoKNJhREMQ37c7ZmldtxQhu4=")
-#ke.loginResult()
+ke = LINETCR.LINE()
+ke.login(token="ElAShEWQBs0hqKopBVW1.4fuVTJqVSQWyBCcCKr7WSq.4p9tEulR26lTSlMpPnvZoKNJhREMQ37c7ZmldtxQhu4=")
+ke.loginResult()
 
-#kf = LINETCR.LINE()
-#kf.login(token="El7wxOXITAP5eD5O5yYc.e3soR9LoLnjgYyOSUmYKNa.wG/8Wsy8XaqTmO3xXYtAIoYdrXGWxSdaxkW1xIA3rnc=")
-#kf.loginResult()
+kf = LINETCR.LINE()
+kf.login(token="El7wxOXITAP5eD5O5yYc.e3soR9LoLnjgYyOSUmYKNa.wG/8Wsy8XaqTmO3xXYtAIoYdrXGWxSdaxkW1xIA3rnc=")
+kf.loginResult()
 
 ki = kk = kc = kd = ke = kf = cl
 
