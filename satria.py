@@ -38,7 +38,7 @@ print "login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-helpMessage =""" 🔯Satria Bot🔯
+helpMessage =""" 🔯Ghosts Bot🔯
 
 🔯Command Bot🔯
 
@@ -118,7 +118,7 @@ wait = {
     'Protectjoin':True,
     'contact':False,
     'autoJoin':True,
-    'autoCancel':{"on":True,"members":1},
+    'autoCancel':{"on":True,"members":4},
     'leaveRoom':True,
     'timeline':True,
     'autoAdd':True,
@@ -129,7 +129,7 @@ wait = {
     "commentBlack":{},
     "wblack":False,
     "dblack":False,
-    "clock":False,
+    "clock":True,
     "cName":"Ghost-1",
     "cName2":"Ghost-2",
     "cName3":"Ghost-3",
@@ -170,7 +170,7 @@ def mention(to,nama):
     msg = Message()
     msg.to = to
     msg.from_ = profile.mid
-    msg.text = "[ENTION]\n"+bb
+    msg.text = "[MENTION]\n"+bb
     msg.contentMetadata ={'MENTION':'{"MENTIONEES":['+aa+']}','EMTVER':'4'}
     print msg
     try:
@@ -242,7 +242,7 @@ def bot(op):
                 if op.param3 in mid:
                     if op.param2 in Amid:
                         G = random.choice(KAC).getGroup(op.param1)
-                        G.preventJoinByTicket = False
+                        G.preventJoinByTicket = True
                         random.choice(KAC).updateGroup(G)
                         Ticket = random.choice(KAC).reissueGroupTicket(op.param1)
                         cl.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -253,7 +253,7 @@ def bot(op):
                 if op.param3 in Amid:
                     if op.param2 in Bmid:
                         X = random.choice(KAC).getGroup(op.param1)
-                        X.preventJoinByTicket = False
+                        X.preventJoinByTicket = True
                         random.choice(KAC).updateGroup(X)
                         Ti = random.choice(KAC).reissueGroupTicket(op.param1)
                         ki.acceptGroupInvitationByTicket(op.param1,Ti)
@@ -264,7 +264,7 @@ def bot(op):
                 if op.param3 in Bmid:
                     if op.param2 in Cmid:
                         X = random.choice(KAC).getGroup(op.param1)
-                        X.preventJoinByTicket = False
+                        X.preventJoinByTicket = True
                         random.choice(KAC).updateGroup(X)
                         Ti = random.choice(KAC).reissueGroupTicket(op.param1)
                         kk.acceptGroupInvitationByTicket(op.param1,Ti)
@@ -275,7 +275,7 @@ def bot(op):
                 if op.param3 in Cmid:
                     if op.param2 in Dmid:
                         X = random.choice(KAC).getGroup(op.param1)
-                        X.preventJoinByTicket = False
+                        X.preventJoinByTicket = True
                         random.choice(KAC).updateGroup(X)
                         Ti = random.choice(KAC).reissueGroupTicket(op.param1)
                         kc.acceptGroupInvitationByTicket(op.param1,Ti)
@@ -286,7 +286,7 @@ def bot(op):
                 if op.param3 in Dmid:
                     if op.param2 in Emid:
                         X = random.choice(KAC).getGroup(op.param1)
-                        X.preventJoinByTicket = False
+                        X.preventJoinByTicket = True
                         random.choice(KAC).updateGroup(X)
                         Ti = random.choice(KAC).reissueGroupTicket(op.param1)
                         kd.acceptGroupInvitationByTicket(op.param1,Ti)
@@ -297,7 +297,7 @@ def bot(op):
                 if op.param3 in Emid:
                     if op.param2 in Fmid:
                         X = kf.getGroup(op.param1)
-                        X.preventJoinByTicket = False
+                        X.preventJoinByTicket = True
                         kf.updateGroup(X)
                         Ti = kf.reissueGroupTicket(op.param1)
                         ke.acceptGroupInvitationByTicket(op.param1,Ti)
@@ -323,7 +323,7 @@ def bot(op):
                     if len(G.members) <= wait["autoCancel"]["members"]:
                         cl.rejectGroupInvitation(op.param1)
             else:
-                Inviter = op.param3.replace("",',')
+                Inviter = op.param3.replace("",',')
                 InviterX = Inviter.split(",")
                 matched_list = []
                 for tag in wait["blacklist"]:
