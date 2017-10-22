@@ -32,6 +32,7 @@ ki5.loginResult()
 ki6 = LINETCR.LINE()
 ki6.login(token="Ek4pqtpohIh6VpoN4Pf3./T/4liwn8a4cJbphi0q4SW./yN/ES56xfdifP/whle229VJrsdxtKQEKx5iPQztX5Q=")
 ki6.loginResult()
+
 print "login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -119,7 +120,7 @@ ki5mid = ki5.getProfile().mid
 ki5mid = ki5.getProfile().mid
 ki6mid = ki6.getProfile().mid
 Bots=[mid,kimid,ki2mid,ki3mid,ki4mid,ki5mid,ki6mid]
-admsa = "uc72e39d8c26cb3aacad5201e6f2c348c"
+admsa = "ua900e1ba4a91a01b7de658f26471c510"
 
 wait = {
     'contact':False,
