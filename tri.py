@@ -6,7 +6,7 @@ from datetime import datetime
 import time,random,sys,json,codecs,threading,glob
 
 cl = LINETCR.LINE()
-cl.login(token="ElBd2ol1bsuBQyWWeHSc.XY452mjSS6Rk1saEBYW0Ja.sOGfPYLv8Xc0MDO7Yxfi3LiYaSGNm7NEy/YDt9HtYgU=")
+cl.login(qr=True)
 cl.loginResult()
 
 ki = LINETCR.LINE()
@@ -20,6 +20,10 @@ ki2.loginResult()
 ki3 = LINETCR.LINE()
 ki3.login(token="Elpakezaog4QxedzyeYd.EMlKHJ3BG3iVuingOKK0Zq.Y5YdE0EQhGWdnxOKuHa8OqAYrxua+rZz/j1R3T1zYqY=")
 ki3.loginResult()
+
+ki4 = LINETCR.LINE()
+ki4.login(token="ElBd2ol1bsuBQyWWeHSc.XY452mjSS6Rk1saEBYW0Ja.sOGfPYLv8Xc0MDO7Yxfi3LiYaSGNm7NEy/YDt9HtYgU=")
+ki4.loginResult()
 
 print "login success"
 reload(sys)
@@ -83,28 +87,28 @@ helpMessage ="""=====[S̷̶̷̶̷̰̰̰̰̰̰̃̃̃̃̃̃̃̃̃̃̃̃Ã̷̰̃̃
 
 =====[S̷̶̷̶̷̰̰̰̰̰̰̃̃̃̃̃̃̃̃̃̃̃̃Ã̷̶̷̶̷̰̰̰̰̰̰̃̃̃̃̃̃̃̃̃̃̃T̷̶̷̶̷̰̰̰̰̰̰̃̃̃̃̃̃̃̃̃̃̃̃R̷̶̷̶̷̰̰̰̰̰̰̃̃̃̃̃̃̃̃̃̃̃̃Ḭ̷̶̷̶̷̰̰̰̰̰̃̃̃̃̃̃̃̃̃̃̃̃Ã̷̶̷̰̰̰̰̃̃̃̃̃̃̃ ̶̷̰̰̃̃̃̃S̷̶̷̶̷̰̰̰̰̰̰̃̃̃̃̃̃̃̃̃̃̃̃Ḛ̷̶̷̶̷̰̰̰̰̰̃̃̃̃̃̃̃̃̃̃̃̃L̷̶̷̶̷̰̰̰̰̰̰̃̃̃̃̃̃̃̃̃̃̃̃F̷̶̷̰̰̰̰̃̃̃̃̃̃̃̃]=====
 """
-KAC=[cl,ki,ki2,ki3,ki4,ki5,ki6,ki7,ki8,ki9,ki10,ki11,ki12,ki13,ki14,ki15,ki16,ki17,ki18]
+KAC=[cl,ki,ki2,ki3,ki4]
 mid = cl.getProfile().mid
 kimid = ki.getProfile().mid
 ki2mid = ki2.getProfile().mid
 ki3mid = ki3.getProfile().mid
 ki4mid = ki4.getProfile().mid
-ki5mid = ki5.getProfile().mid
-ki6mid = ki6.getProfile().mid
-ki7mid = ki7.getProfile().mid
-ki8mid = ki8.getProfile().mid
-ki9mid = ki9.getProfile().mid
-ki10mid = ki10.getProfile().mid
-ki11mid = ki11.getProfile().mid
-ki12mid = ki12.getProfile().mid
-ki13mid = ki13.getProfile().mid
-ki14mid = ki14.getProfile().mid
-ki15mid = ki15.getProfile().mid
-ki16mid = ki16.getProfile().mid
-ki17mid = ki17.getProfile().mid
-ki18mid = ki18.getProfile().mid
-Bots=[mid,kimid,ki2mid,ki3mid,ki4mid,ki5mid,ki6mid,ki7mid,ki8mid,ki9mid,ki10mid,ki11mid,ki12mid,ki13mid,ki14mid,ki15mid,ki16mid,ki17mid,ki18mid]
-admsa = "uc72e39d8c26cb3aacad5201e6f2c348c"
+#ki5mid = ki5.getProfile().mid
+#ki6mid = ki6.getProfile().mid
+#ki7mid = ki7.getProfile().mid
+#ki8mid = ki8.getProfile().mid
+#ki9mid = ki9.getProfile().mid
+#ki10mid = ki10.getProfile().mid
+#ki11mid = ki11.getProfile().mid
+#ki12mid = ki12.getProfile().mid
+#ki13mid = ki13.getProfile().mid
+#ki14mid = ki14.getProfile().mid
+#ki15mid = ki15.getProfile().mid
+#ki16mid = ki16.getProfile().mid
+#ki17mid = ki17.getProfile().mid
+#ki18mid = ki18.getProfile().mid
+Bots=[mid,kimid,ki2mid,ki3mid,ki4mid]
+admsa = "ua900e1ba4a91a01b7de658f26471c510"
 
 wait = {
     'contact':False,
@@ -191,7 +195,6 @@ def mention(to,nama):
        cl.sendMessage(msg)
     except Exception as error:
         print error
-#-----------------------------------------------#
 def sendMessage(to, text, contentMetadata={}, contentType=0):
     mes = Message()
     mes.to, mes.from_ = to, profile.mid
@@ -202,7 +205,7 @@ def sendMessage(to, text, contentMetadata={}, contentType=0):
     messageReq[to] += 1
 
 def NOTIFIED_ACCEPT_GROUP_INVITATION(op):
-    #print op
+    print op
     try:
         cl.sendText(op.param1, cl.getContact(op.param2).displayName + "Selamat Datang😊\n " + group.name + "Salam Kenal Kak")
     except Exception as e:
@@ -225,8 +228,7 @@ def NOTIFIED_LEAVE_GROUP(op):
     except Exception as e:
         print e
         print ("\n\nNOTIFIED_LEAVE_GROUP\n\n")
-        return
-#-----------------------------------------------	
+        return	
 def bot(op):
     try:
         if op.type == 0:
