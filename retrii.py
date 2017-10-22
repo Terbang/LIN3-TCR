@@ -6,31 +6,31 @@ from datetime import datetime
 import time,random,sys,json,codecs,threading,glob
 
 cl = LINETCR.LINE()
-cl.login(token="")
+cl.login(qr=True)
 cl.loginResult()
 
 ki = LINETCR.LINE()
-ki.login(token="")
+ki.login(token="Ekz6uv5WHQufB7BmUlz8.bXk1NtT09ectcZijgY5B6a.WKUR/sRwylZIBhZFm3zTHbGgCyPPZ+z/YI9G52pH6mY=")
 ki.loginResult()
 
 ki2 = LINETCR.LINE()
-ki2.login(token="")
+ki2.login(token="EkWk35mIjOKB2JbpYVLd./ZzsD2MIqpwKvgUcVaAHxq.R0koCndxqXYyvKusa/0fIGXkN7+2INFBm5zCLdvPnCU=")
 ki2.loginResult()
 
 ki3 = LINETCR.LINE()
-ki3.login(token="")
+ki3.login(token="EkdlLqBmLCBU1j0vguyb.wmWRnohi7E/2MEX98LFGIW.pbq1dKVJYSjWmiFbZOV/8aJEU/udDWAYeEDw/+pt8x0=")
 ki3.loginResult()
 
 ki4 = LINETCR.LINE()
-ki4.login(token="")
+ki4.login(token="EkTPSVctKjpeIU6EZ9i6.unovxVnIQoKF/kc4IvS9PG.v+7QfP2QUBZWEiIAa5NeRE/It2JysWThDJ9d3vmcQ0w=")
 ki4.loginResult()
 
 ki5 = LINETCR.LINE()
-ki5.login(token="")
+ki5.login(token="EkmZ5IpyRPfMyPJFIE12.InTzMpBqnDx3tFA9DHnz4G.WJEMot4PRQKz4whcE7vs4d/k7Buo1kCzv7uW7h5cc64=")
 ki5.loginResult()
 
 ki6 = LINETCR.LINE()
-ki6.login(token="")
+ki6.login(token="Ek4pqtpohIh6VpoN4Pf3./T/4liwn8a4cJbphi0q4SW./yN/ES56xfdifP/whle229VJrsdxtKQEKx5iPQztX5Q=")
 ki6.loginResult()
 print "login success"
 reload(sys)
