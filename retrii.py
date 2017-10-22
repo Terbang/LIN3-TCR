@@ -1680,17 +1680,17 @@ def bot(op):
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
                     try:
-                        ki.sendText(msg.to,"􀜁􀇔􏿿Bye Bye😘 "  +  str(ginfo.name)  +  "Tanks To"  + ginfo.creator.displayName )  + "")
+                        ki.sendText(msg.to,"􀜁􀇔􏿿Bye Bye😘 "  +  str(ginfo.name)  +  "Tanks To"  + ginfo.creator.displayName )
                         ki.leaveGroup(msg.to)
-                        ki2.sendText(msg.to,"􀜁􀇔􏿿Bye Bye😘 "  +  str(ginfo.name)  +  "Tanks To"  + ginfo.creator.displayName )  + "")
+                        ki2.sendText(msg.to,"􀜁􀇔􏿿Bye Bye😘 "  +  str(ginfo.name)  +  "Tanks To"  + ginfo.creator.displayName )
                         ki2.leaveGroup(msg.to)
-                        ki3.sendText(msg.to,"􀜁􀇔􏿿Bye Bye😘 "  +  str(ginfo.name)  +  "Tanks To"  + ginfo.creator.displayName )  + "")
+                        ki3.sendText(msg.to,"􀜁􀇔􏿿Bye Bye😘 "  +  str(ginfo.name)  +  "Tanks To"  + ginfo.creator.displayName )
                         ki3.leaveGroup(msg.to)
-                        ki4.sendText(msg.to,"􀜁􀇔􏿿Bye Bye😘 "  +  str(ginfo.name)  +  "Tanks To"  + ginfo.creator.displayName )  + "")
+                        ki4.sendText(msg.to,"􀜁􀇔􏿿Bye Bye😘 "  +  str(ginfo.name)  +  "Tanks To"  + ginfo.creator.displayName )
                         ki4.leaveGroup(msg.to)
-                        ki5.sendText(msg.to,"􀜁􀇔􏿿Bye Bye😘 "  +  str(ginfo.name)  +  "Tanks To"  + ginfo.creator.displayName )  + "")
+                        ki5.sendText(msg.to,"􀜁􀇔􏿿Bye Bye😘 "  +  str(ginfo.name)  +  "Tanks To"  + ginfo.creator.displayName )
                         ki5.leaveGroup(msg.to)
-                        ki6.sendText(msg.to,"􀜁􀇔􏿿Bye Bye😘 "  +  str(ginfo.name)  +  "Tanks To"  + ginfo.creator.displayName )  + "")
+                        ki6.sendText(msg.to,"􀜁􀇔􏿿Bye Bye😘 "  +  str(ginfo.name)  +  "Tanks To"  + ginfo.creator.displayName )
                         ki6.leaveGroup(msg.to)
                     except:
                         pass
