@@ -350,7 +350,6 @@ def bot(op):
                         random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
                         random.choice(KAC).inviteIntoGroup(op.param1,[op.param3])
                         wait["blacklist"][op.param2] = True
-                    else:
                         pass
 
         if op.type == 19:
@@ -360,7 +359,6 @@ def bot(op):
 
         if op.type == 19:
             if op.param3 not in Bots:
-                else:
                     cl.kickoutFromGroup(op.param1,[op.param2])
                     wait["blacklist"][op.param2] = True
                     try:
@@ -1106,11 +1104,11 @@ def bot(op):
                 msg.contentMetadata = {'mid': 'ua900e1ba4a91a01b7de658f26471c510'}
                 cl.sendMessage(msg)
                 print "SUKSES -- SEND CREATOR AND STAFF"
-            elif msg.text in ["Mid","mid","MID"]
+            elif msg.text in ["Mid","mid","MID"]:
                 cl.sendText(msg.to, msg.from_)
             elif "Say1 mid" == msg.text:
                 ki.sendText(msg.to,Amid)
-            elif msg.text in ["bosku]:
+            elif msg.text in ["bosku"]:
                 msg.contentType = 7
                 msg.text = None
                 msg.contentMetadata = {
@@ -1236,7 +1234,7 @@ def bot(op):
                     else:
                         cl.sendText(msg.to,"done")
                 else:
-                    wait["Protect"] = False:
+                    wait["Protect"] = False
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"already On")
                     else:
@@ -1249,7 +1247,7 @@ def bot(op):
                     else:
                         cl.sendText(msg.to,"done")
                 else:
-                    wait["Protect"] = False:
+                    wait["Protect"] = False
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"already Off")
                     else:
@@ -1288,7 +1286,7 @@ def bot(op):
 		    else:
 			cl.sendText(msg.to,"Done")
 		else:
-		    wait["protectinv"] = False:
+		    wait["protectinv"] = False
 		    if wait["lang"] == "JP":
 			cl.sendText(msg.to,"already on")
 		    else:
@@ -1314,7 +1312,7 @@ def bot(op):
 		    else:
 			cl.sendText(msg.to,"Done")
 		else:
-		    wait["protectqr"] = True:
+		    wait["protectqr"] = True
 		    if wait["lang"] == "JP":
 			cl.sendText(msg.to,"already on")
 		    else:
@@ -1387,7 +1385,7 @@ def bot(op):
                 try:
                     strnum = msg.text.replace("Gcancel","")
                     if strnum == "off":
-                        wait["autoCancel"]["on"] = True:
+                        wait["autoCancel"]["on"] = True
                         if wait["lang"] == "JP":
                             cl.sendText(msg.to,"Invitation refused turned off\nTo turn on please specify the number of people and send")
                         else:
@@ -1411,7 +1409,7 @@ def bot(op):
                     else:
                         cl.sendText(msg.to,"done")
                 else:
-                    wait["leaveRoom"] = False:
+                    wait["leaveRoom"] = False
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"done")
                     else:
@@ -1714,7 +1712,7 @@ def bot(op):
                 if wait["clock"] == True:
                     cl.sendText(msg.to,"already off")
                 else:
-                    wait["clock"] = True:
+                    wait["clock"] = True
                     cl.sendText(msg.to,"done")
             elif msg.text in ["Change clock "]:
                 n = msg.text.replace("Change clock ","")
@@ -2023,7 +2021,8 @@ def bot(op):
 
             elif msg.text in ["Test"]:
                 ki.sendText(msg.to,"Already -- Siap Digunakan Ghostku.."
-            elif "Bc" in msg.text:
+           
+			    elif msg."Bc" in msg.text:
 				bctxt = msg.text.replace("Bc","")
 				ki.sendText(msg.to,(bctxt))
 				kk.sendText(msg.to,(bctxt))
