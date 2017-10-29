@@ -11,21 +11,27 @@ import time,random,sys,json,codecs,threading,glob,re
 
 cl = LINETCR.LINE()
 cl.login(qr=True)
+cl.loginResult()
 
 ki = LINETCR.LINE()
-ki.login(qr=True)
+ki.login(token="")
+ki.loginResult()
 
 kk = LINETCR.LINE()
-kk.login(qr=True)
+kk.login(token="")
+kk.loginResult()
 
 kc = LINETCR.LINE()
-kc.login(qr=True)
+kc.login(token="")
+kc.loginResult()
 
-#ks = LINETCR.LINE()
-#ks.login(qr=True)
+ks = LINETCR.LINE()
+ks.login(token="")
+ks.loginResult()
 
-#ka = LINETCR.LINE()
-#ka.login(qr=True)
+ka = LINETCR.LINE()
+ka.login(token="")
+ka.loginResult()
 
 #kb = LINETCR.LINE()
 #kb.login(qr=True)
@@ -45,7 +51,7 @@ print "login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-helpMessage =""" 🈴satria BOT Menu V.3🈴
+helpMessage =""" 🈴Angel BOT Menu V.3🈴
 
 􀔃􀅕🔯Command Bot🔯
 
@@ -102,21 +108,21 @@ Setgroup =""" 🆕Privasi Menu V.3🆕
 
 ̶✍̶̶ե̶̶ҽ̶̶α̶̶ต̶ ̶ճ̶̶օ̶̶ե̶ ̶հ̶̶α̶̶ղ̶̶s̶̶k̶̶í̶̶l̶̶l̶̶s̶✈
 """
-KAC=[cl,ki,kk,kc,ks,ka,kb,ko,ke,ku]
-DEF=[ka,kb,ko,ke,ku]
+KAC=[cl,ki,kk,kc,ks,ka]
+DEF=[cl,ki,kk,kc,ks,ka]
 mid = cl.getProfile().mid
 Amid = ki.getProfile().mid
 Bmid = kk.getProfile().mid
 Cmid = kc.getProfile().mid
 Dmid = ks.getProfile().mid
 Emid = ka.getProfile().mid
-Fmid = kb.getProfile().mid
-Gmid = ko.getProfile().mid
-Hmid = ke.getProfile().mid
-Imid = ku.getProfile().mid
+#Fmid = kb.getProfile().mid
+#Gmid = ko.getProfile().mid
+#Hmid = ke.getProfile().mid
+#Imid = ku.getProfile().mid
 
-Bots=['u7098956b455e5d0e58c249331e0ac86e','u0255a91a890180461e5bfb34f4477c1b','u7a62e4863ddb83722f508346a24934cd','u88f6c775458685ca77552eef4dade464',Dmid,Emid,Fmid,Gmid,Hmid,Imid,"uc72e39d8c26cb3aacad5201e6f2c348c"]
-admin=["uc72e39d8c26cb3aacad5201e6f2c348c"]
+Bots=[mid,Amid,Bmid,Cmid,Dmid,Emid]
+admin=["ua900e1ba4a91a01b7de658f26471c510"]
 wait = {
     'contact':False,
     'autoJoin':True,
@@ -132,7 +138,7 @@ wait = {
     "wblack":False,
     "dblack":False,
     "clock":False,
-    "cName":" ",
+    "cName":"Angel [LED]",
     "cName2":" ",
     "cName3":" ",
     "cName4":" ",
@@ -396,14 +402,16 @@ def bot(op):
         if op.type == 19:
            if op.param2 not in Bots:
               random.choice(DEF).kickoutFromGroup(op.param1,[op.param2])
-              random.choice(DEF).inviteIntoGroup(op.param1,[op.param3])
+              random.choice(KAC).inviteIntoGroup(op.param1,[op.param3])
+              cl.acceptGroupInvitationByTicket(op.param1,Ti)
            else: 
                pass
 
         if op.type == 19:
            if op.param3 in admin:
               random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
-              cl.inviteIntoGroup(op.param1,admin)
+              random.choice(DEF).inviteIntoGroup(op.param1,[op.param3])
+              cl.acceptGroupInvitationByTicket(op.param1,Ti)
            else:
                pass
 
@@ -412,12 +420,15 @@ def bot(op):
                     if op.param2 in Bots:
                         pass
                     try:
+			cl.kickoutFromGroup(op.param1,[op.param2])
                         ki.kickoutFromGroup(op.param1,[op.param2])
                         kk.kickoutFromGroup(op.param1,[op.param2])
                         kc.kickoutFromGroup(op.param1,[op.param2])
                     except:
                         try:
                             random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
+                            random.choice(DEF).inviteIntoGroup(op.param1,[op.param3])
+                            cl.acceptGroupInvitationByTicket(op.param1,Ti)
                         except:
                             print ("client Kick regulation or Because it does not exist in the group、\n["+op.param1+"]\nの\n["+op.param2+"]\nを蹴る事ができませんでした。\nブラックリストに追加します。")
                         if op.param2 in wait["blacklist"]:
@@ -1936,18 +1947,18 @@ def bot(op):
                         time.sleep(0.2)
                         ka.acceptGroupInvitationByTicket(msg.to,Ticket)
                         time.sleep(0.2)
-                        kb.acceptGroupInvitationByTicket(msg.to,Ticket)
-                        time.sleep(0.2)
-                        ko.acceptGroupInvitationByTicket(msg.to,Ticket)
-                        time.sleep(0.2)
-                        ke.acceptGroupInvitationByTicket(msg.to,Ticket)
-                        time.sleep(0.2)
-                        ku.acceptGroupInvitationByTicket(msg.to,Ticket)
-                        time.sleep(0.2)
+                        #kb.acceptGroupInvitationByTicket(msg.to,Ticket)
+                        #time.sleep(0.2)
+                        #ko.acceptGroupInvitationByTicket(msg.to,Ticket)
+                        #time.sleep(0.2)
+                        #ke.acceptGroupInvitationByTicket(msg.to,Ticket)
+                        #time.sleep(0.2)
+                        #ku.acceptGroupInvitationByTicket(msg.to,Ticket)
+                        #time.sleep(0.2)
                         G = cl.getGroup(msg.to)
                         G.preventJoinByTicket = True
                         cl.updateGroup(G)
-                        print "Bot Complete"
+                        print "Angels Complete"
                         G.preventJoinByTicket(G)
                         cl.updateGroup(G)
 
@@ -2351,10 +2362,9 @@ def bot(op):
                 cl.sendText(msg.to,"Saya")
                 ki.sendText(msg.to,"Hadir")
                 kk.sendText(msg.to,"Sayang")
-                kc.sendText(msg.to,"Micuuu")
-          
-           #ks.sendText(msg.to,"...................")
-                #ka.sendText(msg.to,"......................")
+                kc.sendText(msg.to,"Micuuu")          
+                ks.sendText(msg.to,"...................")
+                ka.sendText(msg.to,"......................")
                 #kb.sendText(msg.to,"...........................")
                 #ko.sendText(msg.to,"...............................")
                 #ke.sendText(msg.to,"Complete 100%")
@@ -2371,10 +2381,12 @@ def bot(op):
                 start = time.time()
                 cl.sendText(msg.to, "Waiting...")
                 elapsed_time = time.time() - start
-                cl.sendText(msg.to, "%sseconds" % (elapsed_time))
+                cl.sendText(msg.to, "%sAngelss" % (elapsed_time))
                 ki.sendText(msg.to, "%sseconds" % (elapsed_time))
                 kk.sendText(msg.to, "%sseconds" % (elapsed_time))
                 kc.sendText(msg.to, "%sseconds" % (elapsed_time))
+		ks.sendText(msg.to, "%sseconds" % (elapsed_time))
+		ka.sendText(msg.to, "%sseconds" % (elapsed_time))
       #-------------Fungsi Speedbot Finish---------------------#
       #-------------Fungsi Banned Send Contact Start------------------#
             elif msg.text in ["Ban"]:
@@ -2547,29 +2559,29 @@ def nameUpdate():
 thread2 = threading.Thread(target=nameUpdate)
 thread2.daemon = True
 thread2.start()
-def autolike():
-     for zx in range(0,200):
-        hasil = cl.activity(limit=200)
-        if hasil['result']['posts'][zx]['postInfo']['liked'] == False:
-          try:    
-            cl.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1001)
-            cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like By Satria\n̶✍̶̶ե̶̶ҽ̶̶α̶̶ต̶ ̶ճ̶̶օ̶̶ե̶ ̶հ̶̶α̶̶ղ̶̶s̶̶k̶̶í̶̶l̶̶l̶̶s̶✈\nOPEN ORDER SIRI V10 & ADMIN/STAFF BOT PROTECT\n\nline.me/ti/p/~satria_hk\nline.me/ti/p/~satria_musyafircinta")
-            ki.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1001)
-            ki.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like By Satria\n̶✍̶̶ե̶̶ҽ̶̶α̶̶ต̶ ̶ճ̶̶օ̶̶ե̶ ̶հ̶̶α̶̶ղ̶̶s̶̶k̶̶í̶̶l̶̶l̶̶s̶✈\nOPEN ORDER SIRI V10 & ADMIN/STAFF BOT PROTECT\n\nline.me/ti/p/~satria_hk\nline.me/ti/p/~satria_musyafircinta")
-            kk.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1001)
-            kk.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like By Satria\n̶✍̶̶ե̶̶ҽ̶̶α̶̶ต̶ ̶ճ̶̶օ̶̶ե̶ ̶հ̶̶α̶̶ղ̶̶s̶̶k̶̶í̶̶l̶̶l̶̶s̶✈\nOPEN ORDER SIRI V10 & ADMIN/STAFF BOT PROTECT\n\nline.me/ti/p/~satria_hk\nline.me/ti/p/~satria_musyafircinta")
-            kc.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1001)
-            kc.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like By Satria\n̶✍̶̶ե̶̶ҽ̶̶α̶̶ต̶ ̶ճ̶̶օ̶̶ե̶ ̶հ̶̶α̶̶ղ̶̶s̶̶k̶̶í̶̶l̶̶l̶̶s̶✈\nOPEN ORDER SIRI V10 & ADMIN/STAFF BOT PROTECT\n\nline.me/ti/p/~satria_hk\nline.me/ti/p/~satria_musyafircinta")
-            print "Like"
-          except:
-            pass
-        else:
-            print "Already Liked"
-     time.sleep(500)
-thread2 = threading.Thread(target=autolike)
-thread2.daemon = True
-thread2.start()
-while True:
+#def autolike():
+     #for zx in range(0,200):
+        #hasil = cl.activity(limit=200)
+        #if hasil['result']['posts'][zx]['postInfo']['liked'] == False:
+          #try:    
+            #cl.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1001)
+            #cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like By Satria\n̶✍̶̶ե̶̶ҽ̶̶α̶̶ต̶ ̶ճ̶̶օ̶̶ե̶ ̶հ̶̶α̶̶ղ̶̶s̶̶k̶̶í̶̶l̶̶l̶̶s̶✈\nOPEN ORDER SIRI V10 & ADMIN/STAFF BOT PROTECT\n\nline.me/ti/p/~satria_hk\nline.me/ti/p/~satria_musyafircinta")
+            #ki.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1001)
+            #ki.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like By Satria\n̶✍̶̶ե̶̶ҽ̶̶α̶̶ต̶ ̶ճ̶̶օ̶̶ե̶ ̶հ̶̶α̶̶ղ̶̶s̶̶k̶̶í̶̶l̶̶l̶̶s̶✈\nOPEN ORDER SIRI V10 & ADMIN/STAFF BOT PROTECT\n\nline.me/ti/p/~satria_hk\nline.me/ti/p/~satria_musyafircinta")
+            #kk.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1001)
+            #kk.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like By Satria\n̶✍̶̶ե̶̶ҽ̶̶α̶̶ต̶ ̶ճ̶̶օ̶̶ե̶ ̶հ̶̶α̶̶ղ̶̶s̶̶k̶̶í̶̶l̶̶l̶̶s̶✈\nOPEN ORDER SIRI V10 & ADMIN/STAFF BOT PROTECT\n\nline.me/ti/p/~satria_hk\nline.me/ti/p/~satria_musyafircinta")
+            #kc.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1001)
+            #kc.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like By Satria\n̶✍̶̶ե̶̶ҽ̶̶α̶̶ต̶ ̶ճ̶̶օ̶̶ե̶ ̶հ̶̶α̶̶ղ̶̶s̶̶k̶̶í̶̶l̶̶l̶̶s̶✈\nOPEN ORDER SIRI V10 & ADMIN/STAFF BOT PROTECT\n\nline.me/ti/p/~satria_hk\nline.me/ti/p/~satria_musyafircinta")
+            #print "Like"
+          #except:
+            #pass
+        #else:
+            #print "Already Liked"
+     #time.sleep(500)
+#thread2 = threading.Thread(target=autolike)
+#thread2.daemon = True
+#thread2.start()
+#while True:
 
     try:
         Ops = cl.fetchOps(cl.Poll.rev, 5)
