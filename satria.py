@@ -109,8 +109,8 @@ Cmid = kc.getProfile().mid
 Dmid = kd.getProfile().mid
 Emid = ke.getProfile().mid
 Fmid = kf.getProfile().mid
-Bots=[mid,mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,"uc72e39d8c26cb3aacad5201e6f2c348c"]
-admin=["uc72e39d8c26cb3aacad5201e6f2c348c"]
+Bots=[mid,mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,"u6039033c926bd2491c64e7900b983972"]
+admin=["u6039033c926bd2491c64e7900b983972"]
 wait = {
     'protect':False,
     'protectinv':False,
